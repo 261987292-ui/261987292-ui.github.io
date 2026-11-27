@@ -115,7 +115,22 @@
     @media(max-width:760px){.tiles-3{grid-template-columns:1fr}.tile-card{aspect-ratio:16/10}}
 
     /* ---------- Menu & cart ---------- */
-    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-bottom:42px}
+    .menu-section{position:relative;overflow:hidden;background-color:var(--morado-oscuro);color:#fff;border-top:3px solid var(--dorado);border-bottom:3px solid var(--dorado)}
+    .menu-section::before{content:"";position:absolute;inset:0;z-index:0;background-image:url('assets/mesa.jpg');background-size:cover;background-position:center}
+    .menu-section::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(34,9,38,.93) 0%,rgba(58,19,64,.88) 55%,rgba(34,9,38,.94) 100%)}
+    .menu-section .container{position:relative;z-index:2}
+    .menu-section .section-head h2{color:#fff}
+    .menu-section .section-head p{color:#E9D8F2}
+    .menu-grid{display:grid;grid-template-columns:1fr;gap:22px;margin-bottom:42px}
+    @media(min-width:640px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1024px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+    .info-card{background:linear-gradient(165deg,var(--morado-medio) 0%,var(--morado-profundo) 100%);border:2px solid var(--dorado);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;color:#fff;scroll-margin-top:96px}
+    .info-card .card-body p{color:#EBDCF5;flex:none}
+    .steps{list-style:none;display:flex;flex-direction:column;gap:14px;flex:1;margin:2px 0 6px}
+    .steps li{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;color:#F3E8F7;line-height:1.5}
+    .steps .num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background-color:var(--dorado);color:var(--morado-oscuro);font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+    .info-hours{border-top:1.5px solid rgba(234,178,45,.45);padding-top:14px;font-size:.88rem;font-weight:500}
+    .info-card .btn{width:100%}
     .menu-card{background-color:var(--superficie);border:2px solid var(--borde);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;scroll-margin-top:96px}
     .menu-card:hover{border-color:var(--lavanda)}
     .card-img{aspect-ratio:8/7;overflow:hidden}
@@ -377,7 +392,7 @@
     </section>
 
     <!-- ================= MENÚ Y PEDIDO ================= -->
-    <section id="menu" class="section" style="padding-top:8px" aria-labelledby="menu-title">
+    <section id="menu" class="section menu-section" aria-labelledby="menu-title">
       <div class="container">
         <div class="section-head">
           <h2 id="menu-title">Menú y pedido rápido</h2>
@@ -560,6 +575,20 @@
                   <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un choco flan">+</button>
                 </div>
               </div>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <div class="card-img"><img src="assets/empaque.jpg" alt="Rol artesanal de Oro y Miel empacado y listo para recoger" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-top"><h3>¿Cómo pedir?</h3></div>
+              <ol class="steps">
+                <li><span class="num" aria-hidden="true">1</span><span>Elige el sabor y la cantidad con los botones + y − de cada tarjeta.</span></li>
+                <li><span class="num" aria-hidden="true">2</span><span>Confirma tu pedido por WhatsApp al <a href="tel:+526643883535">+52 664 388 3535</a>.</span></li>
+                <li><span class="num" aria-hidden="true">3</span><span>Recoge tu pedido en Canon de La Piedrera 16, Cañon de la Pedrera, Tijuana.</span></li>
+              </ol>
+              <p class="info-hours">Lun, Mar, Jue y Vie · 7:00 AM – 7:00 PM · Solo pickup</p>
+              <a class="btn btn-wa" href="https://wa.me/526643883535" target="_blank" rel="noopener">Pedir por WhatsApp</a>
             </div>
           </article>
         </div>
