@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oromiel2026.me/sitemap.xml
