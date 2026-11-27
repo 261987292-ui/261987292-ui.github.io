@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Oro y Miel | Recién Hechos en Tijuana (@oromiel2026)</title>
+  <meta name="description" content="Oro y Miel en Tijuana: Tamales $35 MXN, Burritos $25 MXN, Roles desde $50 MXN, Champurrado desde $20 MXN y Choco flan $50 MXN. Solo pickup: Lun, Mar, Jue y Vie de 7:00 AM a 7:00 PM.">
+  <meta property="og:title" content="Oro y Miel | Comida Casera y Repostería Artesanal en Tijuana">
+  <meta property="og:description" content="Tamales, burritos, roles, champurrado y choco flan artesanal en Tijuana. Pide por WhatsApp y recoge tu pedido.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://oromiel2026.me/assets/hero.jpg">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      color-scheme: light;
+      --morado-profundo:#3A1340;
+      --morado-oscuro:#220926;
+      --morado-medio:#582068;
+      --morado-suave:#F4ECFA;
+      --fondo:#FAF6FC;
+      --superficie:#FFFFFF;
+      --rosa:#D1397E;
+      --rosa-claro:#F9E4F0;
+      --lavanda:#BEA5E6;
+      --borde:#E3D4F2;
+      --dorado:#EAB22D;
+      --dorado-claro:#F5CE56;
+      --texto:#3A1340;
+      --texto-suave:#5C3466;
+      --whatsapp:#128C4A;
+      --whatsapp-hover:#0E6E3A;
+      --radio:16px;
+      --sombra:0 12px 32px rgba(58,19,64,.10);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        color-scheme: dark;
+        --fondo:#1B0720;
+        --superficie:#2C1033;
+        --morado-suave:#33153D;
+        --borde:#4E2560;
+        --texto:#F7EDFA;
+        --texto-suave:#D9BEE4;
+        --rosa-claro:#47203C;
+        --sombra:0 12px 32px rgba(0,0,0,.45);
+      }
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none !important;animation:none !important}
+    }
+    body{font-family:'Poppins',system-ui,-apple-system,sans-serif;background-color:var(--fondo);color:var(--texto);line-height:1.6;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+    img{display:block;max-width:100%}
+    a{color:inherit}
+    button{font-family:inherit;cursor:pointer;touch-action:manipulation}
+    a{touch-action:manipulation}
+    button,[role="button"],input,textarea,select,summary{min-height:2.25rem}
+    .container{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+    :focus-visible{outline:3px solid var(--dorado);outline-offset:2px}
+
+    /* ---------- Top bar ---------- */
+    .topbar{position:sticky;top:0;z-index:60;background-color:var(--superficie);border-bottom:2px solid var(--dorado);box-shadow:0 2px 14px rgba(58,19,64,.10)}
+    .topbar-inner{max-width:1120px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;min-height:44px}
+    .nav-brand img{width:38px;height:38px;border-radius:50%;object-fit:cover}
+    .nav-brand span{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:1.15rem}
+    .nav-menu{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-menu a{text-decoration:none;font-size:.86rem;font-weight:500;padding:10px;border-radius:10px;min-height:40px;display:inline-flex;align-items:center}
+    .nav-menu a:hover{background-color:var(--morado-suave)}
+    .nav-menu a.nav-wa{background-color:var(--whatsapp);color:#fff;font-weight:600}
+    .nav-menu a.nav-wa:hover{background-color:var(--whatsapp-hover)}
+
+    /* ---------- Hero ---------- */
+    .hero{position:relative;overflow:hidden;min-height:540px;display:flex;align-items:stretch;background-color:var(--morado-profundo);color:#fff}
+    .hero-bg{position:absolute;inset:0;z-index:0;background-image:url('assets/hero.jpg');background-size:cover;background-position:center}
+    .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(34,9,38,.90) 0%,rgba(58,19,64,.72) 55%,rgba(58,19,64,.38) 100%)}
+    .hero-content{position:relative;z-index:2;width:100%;max-width:1120px;margin:0 auto;padding:56px 24px 48px;display:flex;flex-direction:column;justify-content:space-between;gap:36px}
+    .hero-badge{display:flex;align-items:center;gap:14px}
+    .hero-badge img{width:78px;height:78px;border-radius:50%;object-fit:cover;border:2px solid var(--dorado);background:#fff}
+    .hero-badge span{font-weight:600;letter-spacing:.14em;font-size:.85rem;color:var(--dorado-claro)}
+    .hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+    .hero-bottom{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:22px}
+    .hero-bottom p{max-width:520px;font-size:1.02rem;font-weight:300;color:#F3E8F7}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:600;font-size:.95rem;padding:13px 24px;border-radius:999px;border:2px solid transparent;min-height:48px;transition:background-color .2s ease,border-color .2s ease,color .2s ease}
+    .btn-gold{background-color:var(--dorado);color:var(--morado-oscuro)}
+    .btn-gold:hover{background-color:var(--dorado-claro)}
+    .btn-wa{background-color:var(--whatsapp);color:#fff}
+    .btn-wa:hover{background-color:var(--whatsapp-hover)}
+    .btn-outline{border-color:var(--borde);color:var(--texto);background:transparent}
+    .btn-outline:hover{border-color:var(--rosa);color:var(--rosa)}
+
+    /* ---------- Sections ---------- */
+    section{scroll-margin-top:96px}
+    .section{padding:76px 0}
+    .split-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:20px;border-bottom:1.5px solid var(--texto);margin-bottom:38px}
+    .split-head h2{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:700}
+    .split-head p{max-width:420px;color:var(--texto-suave)}
+    .section-head{max-width:640px;margin-bottom:38px}
+    .section-head h2{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:700;margin-bottom:10px}
+    .section-head p{color:var(--texto-suave)}
+
+    /* ---------- Showcase tiles ---------- */
+    .tiles-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .tile-card{position:relative;border-radius:var(--radio);overflow:hidden;text-decoration:none;box-shadow:var(--sombra);aspect-ratio:4/3;display:block}
+    .tile-card img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+    .tile-card:hover img,.tile-card:focus-visible img{transform:scale(1.05)}
+    .tile-label{position:absolute;left:16px;bottom:14px;background-color:rgba(34,9,38,.82);color:#fff;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.15rem;padding:8px 18px;border-radius:999px;border:1px solid var(--dorado)}
+    @media(max-width:760px){.tiles-3{grid-template-columns:1fr}.tile-card{aspect-ratio:16/10}}
+
+    /* ---------- Menu & cart ---------- */
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-bottom:42px}
+    .menu-card{background-color:var(--superficie);border:2px solid var(--borde);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;scroll-margin-top:96px}
+    .menu-card:hover{border-color:var(--lavanda)}
+    .card-img{aspect-ratio:8/7;overflow:hidden}
+    .card-img img{width:100%;height:100%;object-fit:cover}
+    .card-body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+    .card-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+    .card-top h3{font-size:1.35rem}
+    .price{font-weight:700;color:var(--rosa);white-space:nowrap;font-size:1.02rem}
+    .price small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-suave);text-align:right}
+    .card-body p{color:var(--texto-suave);font-size:.92rem;flex:1}
+    .tag{display:inline-block;align-self:flex-start;background-color:var(--rosa-claro);color:var(--rosa);font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+    .stepper{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1.5px solid var(--borde);padding-top:14px}
+    .stepper .qty-label{font-size:.85rem;font-weight:500;color:var(--texto-suave)}
+    .stepper-controls{display:flex;align-items:center;gap:12px}
+    .step-btn{width:44px;height:44px;border-radius:50%;border:2px solid var(--morado-medio);background:transparent;color:var(--texto);font-size:1.3rem;font-weight:600;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+    .step-btn:hover{background-color:var(--morado-suave)}
+    .step-btn.add{background-color:var(--morado-profundo);border-color:var(--morado-profundo);color:#fff}
+    .step-btn.add:hover{background-color:var(--morado-medio)}
+    @media (prefers-color-scheme: dark){.step-btn.add{background-color:var(--dorado);border-color:var(--dorado);color:var(--morado-oscuro)}}
+    .qty{min-width:28px;text-align:center;font-weight:700;font-size:1.05rem}
+    .flavor-name{font-size:.9rem;font-weight:500;color:var(--texto)}
+    .stepper + .stepper{margin-top:4px}
+    .survey-error{color:var(--rosa);font-size:.88rem;font-weight:600;margin:-4px 0 14px}
+    @media (prefers-color-scheme: dark){.survey-error{color:#F28BBE}}
+
+    .cart-panel{background-color:var(--superficie);border:2px solid var(--dorado);border-radius:var(--radio);padding:28px 24px;box-shadow:var(--sombra);scroll-margin-top:96px}
+    .cart-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1.5px solid var(--borde);margin-bottom:14px}
+    .cart-top h3{font-size:1.5rem}
+    .btn-clear{background:transparent;border:none;color:var(--rosa);font-weight:600;font-size:.9rem;padding:10px 12px;border-radius:10px}
+    .btn-clear:hover{background-color:var(--rosa-claro)}
+    .cart-empty{color:var(--texto-suave);padding:10px 0}
+    .cart-list{list-style:none;display:flex;flex-direction:column}
+    .cart-item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--borde);font-size:.95rem}
+    .cart-item:last-child{border-bottom:none}
+    .cart-item .sub{font-weight:600;white-space:nowrap}
+    .cart-total-row{display:flex;justify-content:space-between;align-items:baseline;margin:16px 0 20px;font-size:1.05rem}
+    .cart-total-row strong{font-size:1.5rem;color:var(--rosa)}
+    .cart-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .cart-note{margin-top:16px;font-size:.85rem;color:var(--texto-suave)}
+
+    /* ---------- Nosotros ---------- */
+    .artesanal{background-color:var(--morado-suave);border-top:3px solid var(--dorado);border-bottom:3px solid var(--dorado)}
+    .artesanal-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:start}
+    @media(min-width:860px){.artesanal-grid{grid-template-columns:320px 1fr;gap:48px}}
+    .frame-9x16{width:100%;max-width:320px;margin:0 auto;aspect-ratio:9/16;border-radius:20px;overflow:hidden;border:3px solid var(--dorado);box-shadow:var(--sombra);background:#000}
+    .frame-9x16 video{width:100%;height:100%;object-fit:cover;display:block}
+    .owner-fig{width:100%;max-width:320px;margin:24px auto 0;border-radius:20px;overflow:hidden;border:3px solid var(--dorado);box-shadow:var(--sombra);background-color:var(--superficie)}
+    .owner-fig img{width:100%;display:block}
+    .owner-fig figcaption{padding:12px 18px;font-size:.9rem;color:var(--texto-suave);text-align:center}
+    .owner-fig figcaption strong{color:var(--texto);display:block;font-size:1rem}
+    .artesanal-copy .kicker{color:var(--rosa);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+    .artesanal-copy h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:14px}
+    .artesanal-copy>p{color:var(--texto-suave);max-width:56ch;margin-bottom:26px}
+    .team-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:26px}
+    @media(min-width:640px){.team-grid{grid-template-columns:1fr 1fr}}
+    .team-card{background-color:var(--superficie);border:2px solid var(--borde);border-radius:var(--radio);padding:22px;box-shadow:var(--sombra)}
+    .team-card .role{color:var(--rosa);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .team-card h3{font-size:1.3rem;margin:6px 0 8px}
+    .team-card p{color:var(--texto-suave);font-size:.92rem}
+    .empaque-fig{border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:2px solid var(--borde)}
+    .empaque-fig img{width:100%;height:260px;object-fit:cover}
+    .empaque-fig figcaption{background-color:var(--superficie);padding:12px 18px;font-size:.88rem;color:var(--texto-suave)}
+
+    /* ---------- Horarios ---------- */
+    .hours-grid{display:grid;grid-template-columns:1fr;gap:24px}
+    @media(min-width:760px){.hours-grid{grid-template-columns:1fr 1fr}}
+    .hours-card{background-color:var(--superficie);border:2px solid var(--borde);border-radius:var(--radio);padding:26px 24px;box-shadow:var(--sombra)}
+    .hours-card h3{font-size:1.4rem;padding-bottom:12px;margin-bottom:8px;border-bottom:1.5px solid var(--borde)}
+    .hours-table{width:100%;border-collapse:collapse;font-size:.95rem}
+    .hours-table td{padding:9px 4px;border-bottom:1px dashed var(--borde)}
+    .hours-table tr:last-child td{border-bottom:none}
+    .hours-table td:last-child{text-align:right;font-weight:500}
+    .hours-table .closed td{color:var(--texto-suave)}
+    .hours-table .today td{color:var(--rosa);font-weight:700}
+    .pickup-badge{display:inline-block;background-color:var(--rosa);color:#fff;font-weight:600;font-size:.8rem;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+    .hours-card address{font-style:normal;margin-bottom:10px}
+    .hours-card .contact-line{color:var(--texto-suave);font-size:.93rem;margin-bottom:20px}
+    .hours-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+    /* ---------- Opiniones ---------- */
+    .feedback{position:relative;overflow:hidden;background-color:var(--morado-oscuro);color:#fff}
+    .feedback-bg{position:absolute;inset:0;z-index:0;background-image:url('assets/rol-lotus.jpg');background-size:cover;background-position:center}
+    .feedback-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(34,9,38,.94),rgba(58,19,64,.86))}
+    .feedback-inner{position:relative;z-index:2}
+    .feedback-grid{display:grid;grid-template-columns:1fr;gap:36px}
+    @media(min-width:860px){.feedback-grid{grid-template-columns:1fr 1fr;gap:48px;align-items:start}}
+    .feedback h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:14px}
+    .feedback .lead{color:#E9D8F2;font-weight:300;max-width:44ch}
+    .survey{background-color:var(--superficie);color:var(--texto);border-radius:var(--radio);padding:28px 24px;box-shadow:var(--sombra);border-top:4px solid var(--dorado)}
+    .survey h3{font-size:1.35rem;margin-bottom:18px}
+    .field{margin-bottom:18px}
+    .field label{display:block;font-weight:600;font-size:.9rem;margin-bottom:8px}
+    .field input[type="text"],.field textarea{width:100%;border:2px solid var(--borde);border-radius:12px;padding:12px 14px;font-family:inherit;font-size:.95rem;background-color:var(--superficie);color:var(--texto)}
+    .field input[type="text"]:focus,.field textarea:focus{border-color:var(--morado-medio);outline:none}
+    .field textarea{resize:vertical;min-height:96px}
+    .stars{display:flex;gap:6px}
+    .star-btn{background:transparent;border:none;padding:6px;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px}
+    .star-btn svg{width:30px;height:30px;fill:none;stroke:var(--dorado);stroke-width:1.6}
+    .star-btn.active svg{fill:var(--dorado)}
+    .star-btn:hover{background-color:var(--morado-suave)}
+    .survey .btn{width:100%}
+
+    /* ---------- Footer ---------- */
+    footer{background-color:var(--morado-oscuro);border-top:4px solid var(--dorado);color:#fff;padding:60px 0 44px}
+    .footer-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:start}
+    @media(min-width:820px){.footer-grid{grid-template-columns:210px 1fr 300px;gap:40px}}
+    .footer-brand{text-align:center}
+    .footer-brand img{width:112px;height:112px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:2px solid var(--dorado)}
+    .footer-brand strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;letter-spacing:.06em}
+    .footer-brand span{color:var(--dorado-claro);font-size:.9rem}
+    .footer-photo{border-radius:var(--radio);overflow:hidden;border:2px solid var(--morado-medio)}
+    .footer-photo img{width:100%;height:100%;min-height:190px;object-fit:cover}
+    .footer-block h4{font-size:1.1rem;margin-bottom:10px;color:var(--dorado-claro)}
+    .footer-block p{color:#E9D8F2;font-size:.93rem;font-weight:300}
+    .footer-block{margin-bottom:22px}
+    .social-row{display:flex;flex-wrap:wrap;gap:10px}
+    .social-chip{display:inline-flex;align-items:center;min-height:40px;padding:8px 18px;border:1.5px solid var(--lavanda);border-radius:999px;text-decoration:none;font-size:.88rem;font-weight:500}
+    .social-chip:hover{border-color:var(--dorado);color:var(--dorado-claro)}
+    .footer-wa{display:inline-flex;align-items:center;gap:8px;color:#7BE3A8;font-weight:600;text-decoration:none;padding:10px 4px;min-height:44px}
+    .footer-wa:hover{text-decoration:underline}
+
+    /* ---------- Adaptación móvil ---------- */
+    @media(max-width:760px){
+      .container{padding:0 16px}
+
+      /* Encabezado en dos filas: marca arriba y enlaces repartidos abajo,
+         todos con altura cómoda para tocar (44px) */
+      .topbar-inner{flex-wrap:wrap;padding:8px 14px 6px;gap:4px 10px}
+      .nav-brand{flex:1 1 auto}
+      .nav-menu{order:3;flex:1 1 100%;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+      .nav-menu a{justify-content:center;text-align:center;font-size:.8rem;padding:10px 4px;min-height:44px}
+      .nav-menu a.nav-wa{grid-column:span 2}
+
+      /* Portada: menos alto, botón de pedido a todo el ancho */
+      .hero{min-height:0}
+      .hero-content{padding:36px 16px 34px;gap:26px}
+      .hero-badge{gap:10px}
+      .hero-badge img{width:58px;height:58px}
+      .hero-badge span{font-size:.76rem;letter-spacing:.1em}
+      .hero-bottom{gap:16px}
+      .hero-bottom .btn{width:100%}
+
+      /* Secciones y encabezados */
+      .section{padding:52px 0}
+      .split-head{margin-bottom:28px;padding-bottom:16px}
+      .section-head{margin-bottom:28px}
+
+      /* Menú: una sola columna, fotos menos altas y filas de cantidad
+         que no se aprietan */
+      .menu-grid{grid-template-columns:1fr;gap:18px;margin-bottom:30px}
+      .card-img{aspect-ratio:16/9}
+      .card-body{padding:18px 16px}
+      .stepper{gap:8px}
+      .flavor-name{flex:1 1 auto;min-width:0}
+      .stepper-controls{flex-shrink:0;gap:10px}
+
+      /* Pedido: panel compacto y botones a todo el ancho */
+      .cart-panel{padding:22px 16px}
+      .cart-actions .btn{width:100%}
+      .cart-item{font-size:.9rem}
+
+      /* Nosotros */
+      .artesanal-grid{gap:28px}
+      .empaque-fig img{height:200px}
+
+      /* Horarios y recogida */
+      .hours-card{padding:22px 16px}
+      .hours-table{font-size:.9rem}
+      .hours-actions .btn{width:100%}
+
+      /* Encuesta: letra de 16px para que iOS no haga zoom al escribir */
+      .survey{padding:22px 16px}
+      .field input[type="text"],.field textarea{font-size:1rem}
+      .stars{gap:2px}
+
+      /* Pie: respiro inferior seguro en teléfonos con muesca */
+      footer{padding:46px 0 calc(36px + env(safe-area-inset-bottom))}
+      .footer-brand img{width:96px;height:96px}
+      .social-row{justify-content:center}
+      .footer-wa{justify-content:center;width:100%}
+
+      section,.menu-card,.cart-panel{scroll-margin-top:162px}
+    }
+
+    /* Teléfonos muy angostos */
+    @media(max-width:380px){
+      .nav-menu{grid-template-columns:repeat(3,1fr)}
+      .nav-menu a.nav-wa{grid-column:span 3}
+      .hero h1{font-size:2.25rem}
+      .step-btn{width:42px;height:42px}
+      .qty{min-width:22px}
+      .cart-total-row strong{font-size:1.3rem}
+      section,.menu-card,.cart-panel{scroll-margin-top:208px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="nav-brand" href="#inicio"><img src="assets/logo.jpg" alt="Logotipo de Oro y Miel" width="38" height="38"><span>Oro y Miel</span></a>
+      <nav class="nav-menu" aria-label="Menú de navegación">
+        <a href="#inicio">Inicio</a>
+        <a href="#creaciones">Creaciones</a>
+        <a href="#menu">Menú</a>
+        <a href="#artesanal">Nosotros</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#pedidos" class="nav-wa">Pedidos (<span id="nav-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <img src="assets/logo.jpg" alt="Logotipo oficial de Oro y Miel" width="78" height="78">
+          <span>ORO Y MIEL · @oromiel2026</span>
+        </div>
+        <h1 id="hero-title">El oro de la tradición,<br>la miel de lo casero.</h1>
+        <div class="hero-bottom">
+          <p>¡Bienvenidos a Oro y Miel en Tijuana! Cada tamal, burrito, rol, champurrado y choco flan se prepara de manera casera y artesanal, recién hecho para recoger (solo pickup).</p>
+          <a class="btn btn-gold" href="#menu"><span>Haz tu pedido hoy</span><span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CREACIONES ================= -->
+    <section id="creaciones" class="section" aria-labelledby="creaciones-title">
+      <div class="container">
+        <div class="split-head">
+          <h2 id="creaciones-title">Preparados con amor<br>cada día de servicio</h2>
+          <p>Masa suave, rellenos caseros y el sazón familiar que hace especial cada bocado en Tijuana.</p>
+        </div>
+        <div class="tiles-3">
+          <a class="tile-card" href="#card-roles">
+            <img src="assets/roles-decorados.jpg" alt="Roles artesanales con fresa, chocolate y galleta Oreo" loading="lazy">
+            <span class="tile-label">Roles</span>
+          </a>
+          <a class="tile-card" href="#card-tamales">
+            <img src="assets/escena-tamales.jpg" alt="Tamales caseros en hoja de maíz" loading="lazy">
+            <span class="tile-label">Tamales</span>
+          </a>
+          <a class="tile-card" href="#card-burritos">
+            <img src="assets/burritos.jpg" alt="Burritos de chorizo con papa y queso en tortilla de harina dorada" loading="lazy">
+            <span class="tile-label">Burritos</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MENÚ Y PEDIDO ================= -->
+    <section id="menu" class="section" style="padding-top:8px" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="menu-title">Menú y pedido rápido</h2>
+          <p>Precios en MXN. Elige el sabor y la cantidad de cada producto con + y −, y confirma tu pedido por WhatsApp.</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card" id="card-tamales" data-id="tamales" data-name="Tamales" data-price="35">
+            <div class="card-img"><img src="assets/escena-tamales.jpg" alt="Tamales caseros en hoja de maíz" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-top"><h3>Tamales</h3><span class="price">$35 MXN</span></div>
+              <p>Tamales caseros en hoja de maíz, en cuatro sabores: res, pollo en salsa verde, en salsa roja y queso.</p>
+              <div class="stepper" data-flavor="Res">
+                <span class="flavor-name">Res</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un tamal de res">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un tamal de res">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Pollo en salsa verde">
+                <span class="flavor-name">Pollo en salsa verde</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un tamal de pollo en salsa verde">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un tamal de pollo en salsa verde">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="En salsa roja">
+                <span class="flavor-name">En salsa roja</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un tamal en salsa roja">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un tamal en salsa roja">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Queso">
+                <span class="flavor-name">Queso</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un tamal de queso">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un tamal de queso">+</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" id="card-burritos" data-id="burritos" data-name="Burritos" data-price="25">
+            <div class="card-img"><img src="assets/burritos.jpg" alt="Burritos de chorizo con papa y queso en tortilla de harina" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-top"><h3>Burritos</h3><span class="price">$25 MXN</span></div>
+              <p>Tortilla de harina doradita con cuatro rellenos caseros: chorizo con papa, pollo en salsa verde y papa, huevo con jamón y frijol con queso.</p>
+              <div class="stepper" data-flavor="Chorizo con papa">
+                <span class="flavor-name">Chorizo con papa</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un burrito de chorizo con papa">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un burrito de chorizo con papa">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Pollo en salsa verde y papa">
+                <span class="flavor-name">Pollo en salsa verde y papa</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un burrito de pollo en salsa verde y papa">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un burrito de pollo en salsa verde y papa">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Huevo con jamón">
+                <span class="flavor-name">Huevo con jamón</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un burrito de huevo con jamón">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un burrito de huevo con jamón">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Frijol con queso">
+                <span class="flavor-name">Frijol con queso</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un burrito de frijol con queso">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un burrito de frijol con queso">+</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" id="card-roles" data-id="roles" data-name="Roles" data-price="50">
+            <div class="card-img"><img src="assets/roles-canela.jpg" alt="Roles recién horneados con glaseado" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-top"><h3>Roles</h3><span class="price">$50–$70 MXN</span></div>
+              <p>Roles recién horneados con glaseado suave y sabor artesanal: natural, Oreo, mazapán, fresa y tres leches.</p>
+              <div class="stepper" data-flavor="Natural" data-price="50">
+                <span class="flavor-name">Natural · $50</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un rol natural">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un rol natural">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Oreo" data-price="50">
+                <span class="flavor-name">Oreo · $50</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un rol de Oreo">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un rol de Oreo">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Mazapán" data-price="50">
+                <span class="flavor-name">Mazapán · $50</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un rol de mazapán">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un rol de mazapán">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Fresa" data-price="50">
+                <span class="flavor-name">Fresa · $50</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un rol de fresa">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un rol de fresa">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="Tres leches" data-price="70">
+                <span class="flavor-name">Tres leches · $70</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un rol de tres leches">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un rol de tres leches">+</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" id="card-champurrado" data-id="champurrado" data-name="Champurrado" data-price="20">
+            <div class="card-img"><img src="assets/champurrado.jpg" alt="Champurrado artesanal caliente en taza" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-top"><h3>Champurrado</h3><span class="price"><small>Desde</small>$20 MXN</span></div>
+              <span class="tag">Especialidad del día</span>
+              <p>Espeso de chocolate, maíz y canela, en tres tamaños. Sujeto a disponibilidad del día.</p>
+              <div class="stepper" data-flavor="10 oz" data-price="20">
+                <span class="flavor-name">10 oz · $20</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un champurrado de 10 onzas">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un champurrado de 10 onzas">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="12 oz" data-price="30">
+                <span class="flavor-name">12 oz · $30</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un champurrado de 12 onzas">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un champurrado de 12 onzas">+</button>
+                </div>
+              </div>
+              <div class="stepper" data-flavor="16 oz" data-price="45">
+                <span class="flavor-name">16 oz · $45</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un champurrado de 16 onzas">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un champurrado de 16 onzas">+</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" id="card-flan" data-id="chocoflan" data-name="Choco flan" data-price="50">
+            <div class="card-img"><img src="assets/flan.jpg" alt="Choco flan casero con caramelo" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-top"><h3>Choco flan</h3><span class="price"><small>Del día</small>$50 MXN</span></div>
+              <span class="tag">Especialidad del día</span>
+              <p>Choco flan casero: flan cremoso con caramelo sobre pastel de chocolate. Preparación limitada del día.</p>
+              <div class="stepper" data-flavor="">
+                <span class="qty-label">Cantidad</span>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" data-action="remove" aria-label="Quitar un choco flan">−</button>
+                  <span class="qty" data-qty aria-live="polite">0</span>
+                  <button type="button" class="step-btn add" data-action="add" aria-label="Agregar un choco flan">+</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Carrito / pedido -->
+        <div class="cart-panel" id="pedidos" aria-labelledby="cart-title">
+          <div class="cart-top">
+            <h3 id="cart-title">Tu pedido rápido</h3>
+            <button type="button" class="btn-clear" id="clear-cart">Limpiar pedido</button>
+          </div>
+          <p class="cart-empty" id="cart-empty">Aún no has agregado productos. Usa el botón + en cada tarjeta.</p>
+          <ul class="cart-list" id="cart-list"></ul>
+          <div class="cart-total-row"><span>Total estimado</span><strong id="cart-total">$0 MXN</strong></div>
+          <div class="cart-actions">
+            <button type="button" class="btn btn-wa" id="send-wa">Confirmar pedido por WhatsApp (+52 664 388 3535)</button>
+            <a class="btn btn-outline" href="tel:+526643883535">Llamar para confirmar</a>
+          </div>
+          <p class="cart-note">* Servicio exclusivamente para recoger (pickup) en Tijuana. Champurrado y choco flan sujetos a disponibilidad del día.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NOSOTROS ================= -->
+    <section id="artesanal" class="section artesanal" aria-labelledby="artesanal-title">
+      <div class="container artesanal-grid">
+        <div>
+          <figure class="frame-9x16">
+            <video src="assets/video-roles.mp4" poster="assets/roles-decorados.jpg" controls playsinline preload="metadata" aria-label="Video de roles artesanales Oro y Miel"></video>
+          </figure>
+          <figure class="owner-fig">
+            <img src="assets/chica-oromiel.jpg" alt="Karla Figueroa, fundadora de Oro y Miel, frente al logotipo del negocio" loading="lazy">
+            <figcaption><strong>Karla Figueroa · Fundadora</strong>Karla es la fundadora de Oro y Miel. Desde Tijuana prepara cada tamal, rol y champurrado de manera casera, en lotes pequeños y recién hechos para recoger.</figcaption>
+          </figure>
+        </div>
+        <div class="artesanal-copy">
+          <p class="kicker">Cocina familiar · @oromiel2026</p>
+          <h2 id="artesanal-title">Tradición artesanal y sazón casera en Tijuana</h2>
+          <p>En <strong>Oro y Miel</strong> cada platillo conserva la calidez de casa. Trabajamos en lotes pequeños para entregarte tamales calientitos, burritos dorados al momento y roles recién salidos del horno.</p>
+          <figure class="empaque-fig">
+            <img src="assets/empaque.jpg" alt="Rol artesanal de Oro y Miel empacado con su etiqueta" loading="lazy">
+            <figcaption>Así empacamos tus roles: sellados y con la etiqueta de la casa, listos para recoger.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HORARIOS Y PICKUP ================= -->
+    <section id="horarios" class="section" aria-labelledby="hours-title">
+      <div class="container">
+        <div class="split-head">
+          <h2 id="hours-title">Horarios y punto<br>de recogida</h2>
+          <p>Exclusivamente para recoger (pickup-only) en Tijuana, Baja California.</p>
+        </div>
+        <div class="hours-grid">
+          <div class="hours-card">
+            <h3>Días y horarios</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr data-day="1"><td>Lunes</td><td>7:00 AM – 7:00 PM</td></tr>
+                <tr data-day="2"><td>Martes</td><td>7:00 AM – 7:00 PM</td></tr>
+                <tr data-day="3" class="closed"><td>Miércoles</td><td>Sin servicio regular</td></tr>
+                <tr data-day="4"><td>Jueves</td><td>7:00 AM – 7:00 PM</td></tr>
+                <tr data-day="5"><td>Viernes</td><td>7:00 AM – 7:00 PM</td></tr>
+                <tr data-day="6" class="closed"><td>Sábado</td><td>Sin servicio regular</td></tr>
+                <tr data-day="0" class="closed"><td>Domingo</td><td>Sin servicio regular</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="hours-card">
+            <h3>Ubicación y entrega</h3>
+            <span class="pickup-badge">Solo Pickup (sin envío a domicilio)</span>
+            <address>Canon de La Piedrera 16, Cañon de la Pedrera, 22035<br>Tijuana, B.C.</address>
+            <p class="contact-line">Confirmamos disponibilidad y hora de recogida por WhatsApp o llamada al <a href="tel:+526643883535">+52 664 388 3535</a>.</p>
+            <div class="hours-actions">
+              <a class="btn btn-gold" href="https://maps.app.goo.gl/zPuHzPgKcutiAP9M9" target="_blank" rel="noopener"><span>Abrir en Google Maps</span><span aria-hidden="true">↗</span></a>
+              <a class="btn btn-wa" href="https://wa.me/526643883535" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPINIONES ================= -->
+    <section id="opiniones" class="section feedback" aria-labelledby="opiniones-title">
+      <div class="feedback-bg" aria-hidden="true"></div>
+      <div class="feedback-overlay" aria-hidden="true"></div>
+      <div class="container feedback-inner">
+        <div class="feedback-grid">
+          <div>
+            <h2 id="opiniones-title">Siempre buscando<br>mejorar para ti.</h2>
+            <p class="lead">Cuéntanos qué fue lo que más te gustó de tu pedido o qué sabor especial te gustaría ver próximamente en Oro y Miel.</p>
+          </div>
+          <form class="survey" id="survey-form">
+            <h3>Encuesta de satisfacción</h3>
+            <div class="field">
+              <label for="client-name">Tu nombre</label>
+              <input type="text" id="client-name" name="nombre" autocomplete="name" placeholder="Escribe tu nombre">
+            </div>
+            <div class="field">
+              <label id="rate-label">¿Cómo calificarías nuestro sabor y atención?</label>
+              <div class="stars" role="radiogroup" aria-labelledby="rate-label">
+                <button type="button" class="star-btn" data-rate="1" role="radio" aria-checked="false" aria-label="1 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></button>
+                <button type="button" class="star-btn" data-rate="2" role="radio" aria-checked="false" aria-label="2 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></button>
+                <button type="button" class="star-btn" data-rate="3" role="radio" aria-checked="false" aria-label="3 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></button>
+                <button type="button" class="star-btn" data-rate="4" role="radio" aria-checked="false" aria-label="4 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></button>
+                <button type="button" class="star-btn" data-rate="5" role="radio" aria-checked="false" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></button>
+              </div>
+            </div>
+            <div class="field">
+              <label for="client-comment">Cuéntanos tu experiencia</label>
+              <textarea id="client-comment" name="comentario" placeholder="¿Qué te pareció el sabor, la atención…?"></textarea>
+            </div>
+            <p class="survey-error" id="survey-error" role="alert" hidden></p>
+            <button type="submit" class="btn btn-wa">Enviar opinión por WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="Logotipo de Oro y Miel" width="112" height="112" loading="lazy">
+        <strong>ORO Y MIEL</strong>
+        <span>@oromiel2026</span>
+      </div>
+      <div class="footer-photo">
+        <img src="assets/mesa.jpg" alt="Mesa de Oro y Miel con tamales, roles, choco flan y champurrado" loading="lazy">
+      </div>
+      <div>
+        <div class="footer-block">
+          <h4>Dirección y Pickup</h4>
+          <p>Canon de La Piedrera 16<br>Cañon de la Pedrera, 22035<br>Tijuana, B.C.<br><a href="tel:+526643883535">+52 664 388 3535</a></p>
+        </div>
+        <div class="footer-block">
+          <h4>Redes sociales</h4>
+          <div class="social-row">
+            <a class="social-chip" href="https://www.instagram.com/oromiel2026/" target="_blank" rel="noopener">Instagram · @oromiel2026</a>
+            <a class="social-chip" href="https://wa.me/526643883535" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <a class="footer-wa" href="https://wa.me/526643883535?text=Hola%20Oro%20y%20Miel%20(@oromiel2026)%2C%20quiero%20confirmar%20mi%20pedido." target="_blank" rel="noopener"><span>Escríbenos por WhatsApp</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    "use strict";
+    var WA_URL = "https://wa.me/526643883535";
+    var cart = {};
+
+    function money(n){ return "$" + n + " MXN"; }
+
+    var rows = document.querySelectorAll(".menu-card .stepper");
+    var listEl = document.getElementById("cart-list");
+    var emptyEl = document.getElementById("cart-empty");
+    var totalEl = document.getElementById("cart-total");
+    var navCount = document.getElementById("nav-count");
+
+    function cartKey(id, flavor){ return id + "|" + flavor; }
+
+    function renderCart(){
+      listEl.innerHTML = "";
+      var total = 0, count = 0;
+      rows.forEach(function(row){
+        var card = row.closest(".menu-card");
+        var id = card.getAttribute("data-id");
+        var flavor = row.getAttribute("data-flavor") || "";
+        var item = cart[cartKey(id, flavor)];
+        row.querySelector("[data-qty]").textContent = item ? item.qty : 0;
+      });
+      Object.keys(cart).forEach(function(key){
+        var item = cart[key];
+        var sub = item.price * item.qty;
+        total += sub; count += item.qty;
+        var li = document.createElement("li");
+        li.className = "cart-item";
+        var left = document.createElement("span");
+        left.textContent = item.qty + " × " + item.name + (item.flavor ? " (" + item.flavor + ")" : "");
+        var right = document.createElement("span");
+        right.className = "sub";
+        right.textContent = money(sub);
+        li.appendChild(left); li.appendChild(right);
+        listEl.appendChild(li);
+      });
+      emptyEl.style.display = count === 0 ? "block" : "none";
+      totalEl.textContent = money(total);
+      navCount.textContent = count;
+    }
+
+    rows.forEach(function(row){
+      var card = row.closest(".menu-card");
+      var id = card.getAttribute("data-id");
+      var name = card.getAttribute("data-name");
+      var price = parseInt(row.getAttribute("data-price") || card.getAttribute("data-price"), 10);
+      var flavor = row.getAttribute("data-flavor") || "";
+      var key = cartKey(id, flavor);
+      row.addEventListener("click", function(e){
+        var btn = e.target.closest("[data-action]");
+        if(!btn) return;
+        var cur = cart[key] ? cart[key].qty : 0;
+        if(btn.getAttribute("data-action") === "add"){
+          cart[key] = { name: name, flavor: flavor, price: price, qty: cur + 1 };
+        } else {
+          if(cur <= 1) delete cart[key];
+          else cart[key].qty = cur - 1;
+        }
+        renderCart();
+      });
+    });
+
+    document.getElementById("clear-cart").addEventListener("click", function(){
+      cart = {};
+      renderCart();
+    });
+
+    document.getElementById("send-wa").addEventListener("click", function(){
+      var keys = Object.keys(cart);
+      var lines;
+      if(keys.length === 0){
+        lines = ["Hola Oro y Miel (@oromiel2026), quiero consultar disponibilidad del día para hacer un pedido pickup en Tijuana."];
+      } else {
+        var total = 0;
+        lines = ["Hola Oro y Miel (@oromiel2026), quiero confirmar este pedido para recoger en Tijuana:", ""];
+        keys.forEach(function(key){
+          var it = cart[key];
+          var sub = it.price * it.qty;
+          total += sub;
+          lines.push("• " + it.qty + " × " + it.name + (it.flavor ? " (" + it.flavor + ")" : "") + " — " + money(sub));
+        });
+        lines.push("", "Total estimado: " + money(total), "¿Me confirman disponibilidad y hora de recogida?");
+      }
+      window.open(WA_URL + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+    });
+
+    /* Resalta el día actual en la tabla de horarios */
+    var today = new Date().getDay();
+    document.querySelectorAll(".hours-table tr[data-day]").forEach(function(row){
+      if(parseInt(row.getAttribute("data-day"), 10) === today){
+        row.classList.add("today");
+        var first = row.querySelector("td");
+        if(first) first.textContent += " · Hoy";
+      }
+    });
+
+    /* Calificación por estrellas */
+    var starBtns = document.querySelectorAll(".star-btn");
+    var surveyError = document.getElementById("survey-error");
+    var selectedRate = 0;
+    function paintStars(){
+      starBtns.forEach(function(b){
+        var r = parseInt(b.getAttribute("data-rate"), 10);
+        var on = r <= selectedRate;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-checked", r === selectedRate ? "true" : "false");
+      });
+    }
+    starBtns.forEach(function(b){
+      b.addEventListener("click", function(){
+        selectedRate = parseInt(b.getAttribute("data-rate"), 10);
+        surveyError.hidden = true;
+        paintStars();
+      });
+    });
+    paintStars();
+
+    document.getElementById("survey-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      var nombre = document.getElementById("client-name").value.trim();
+      var comentario = document.getElementById("client-comment").value.trim();
+      if(selectedRate === 0){
+        surveyError.textContent = "Elige una calificación tocando una estrella antes de enviar.";
+        surveyError.hidden = false;
+        return;
+      }
+      if(!comentario){
+        surveyError.textContent = "Cuéntanos tu experiencia con tus propias palabras para poder enviarla.";
+        surveyError.hidden = false;
+        document.getElementById("client-comment").focus();
+        return;
+      }
+      surveyError.hidden = true;
+      var lines = ["¡Hola Oro y Miel! Les dejo mi opinión:"];
+      if(nombre) lines.push("• Nombre: " + nombre);
+      lines.push("• Calificación: " + selectedRate + "/5");
+      lines.push("• Comentario: " + comentario);
+      window.open(WA_URL + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+    });
+
+    renderCart();
+  })();
+  </script>
+</body>
+</html>
