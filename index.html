@@ -9,7 +9,7 @@
   <meta property="og:title" content="Oro y Miel | Comida Casera y Repostería Artesanal en Tijuana">
   <meta property="og:description" content="Tamales, burritos, roles, champurrado y choco flan artesanal en Tijuana. Pide por WhatsApp y recoge tu pedido.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://oromiel2026.me/assets/hero.jpg">
+  <meta property="og:image" content="assets/hero.jpg">
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +120,7 @@
     .menu-card:hover{border-color:var(--lavanda)}
     .card-img{aspect-ratio:8/7;overflow:hidden}
     .card-img img{width:100%;height:100%;object-fit:cover}
+    .card-img img.img-champurrado{object-position:50% 32%}
     .card-body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
     .card-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
     .card-top h3{font-size:1.35rem}
@@ -157,8 +158,11 @@
     .cart-note{margin-top:16px;font-size:.85rem;color:var(--texto-suave)}
 
     /* ---------- Nosotros ---------- */
-    .artesanal{background-color:var(--morado-suave);border-top:3px solid var(--dorado);border-bottom:3px solid var(--dorado)}
-    .artesanal-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:start}
+    .artesanal{position:relative;overflow:hidden;background-color:var(--morado-oscuro);color:#fff;border-top:3px solid var(--dorado);border-bottom:3px solid var(--dorado)}
+    .artesanal::before{content:"";position:absolute;inset:0;z-index:0;background-image:url('assets/fondo-nosotros.jpg');background-size:cover;background-position:center}
+    .artesanal::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(155deg,rgba(34,9,38,.86) 0%,rgba(58,19,64,.72) 55%,rgba(34,9,38,.84) 100%)}
+    .artesanal .container{position:relative;z-index:2}
+    .artesanal-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:stretch}
     @media(min-width:860px){.artesanal-grid{grid-template-columns:320px 1fr;gap:48px}}
     .frame-9x16{width:100%;max-width:320px;margin:0 auto;aspect-ratio:9/16;border-radius:20px;overflow:hidden;border:3px solid var(--dorado);box-shadow:var(--sombra);background:#000}
     .frame-9x16 video{width:100%;height:100%;object-fit:cover;display:block}
@@ -166,17 +170,18 @@
     .owner-fig img{width:100%;display:block}
     .owner-fig figcaption{padding:12px 18px;font-size:.9rem;color:var(--texto-suave);text-align:center}
     .owner-fig figcaption strong{color:var(--texto);display:block;font-size:1rem}
-    .artesanal-copy .kicker{color:var(--rosa);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+    .artesanal-copy{display:flex;flex-direction:column}
+    .artesanal-copy .kicker{color:var(--dorado-claro);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
     .artesanal-copy h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:14px}
-    .artesanal-copy>p{color:var(--texto-suave);max-width:56ch;margin-bottom:26px}
+    .artesanal-copy>p{color:#EBDCF5;max-width:56ch;margin-bottom:26px}
     .team-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:26px}
     @media(min-width:640px){.team-grid{grid-template-columns:1fr 1fr}}
     .team-card{background-color:var(--superficie);border:2px solid var(--borde);border-radius:var(--radio);padding:22px;box-shadow:var(--sombra)}
     .team-card .role{color:var(--rosa);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
     .team-card h3{font-size:1.3rem;margin:6px 0 8px}
     .team-card p{color:var(--texto-suave);font-size:.92rem}
-    .empaque-fig{border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:2px solid var(--borde)}
-    .empaque-fig img{width:100%;height:260px;object-fit:cover}
+    .empaque-fig{border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:2px solid var(--borde);flex:1 1 auto;display:flex;flex-direction:column}
+    .empaque-fig img{width:100%;flex:1 1 auto;min-height:260px;height:100%;object-fit:cover}
     .empaque-fig figcaption{background-color:var(--superficie);padding:12px 18px;font-size:.88rem;color:var(--texto-suave)}
 
     /* ---------- Horarios ---------- */
@@ -279,7 +284,8 @@
 
       /* Nosotros */
       .artesanal-grid{gap:28px}
-      .empaque-fig img{height:200px}
+      .empaque-fig{flex:none}
+      .empaque-fig img{height:200px;min-height:200px;flex:none}
 
       /* Horarios y recogida */
       .hours-card{padding:22px 16px}
@@ -508,7 +514,7 @@
           </article>
 
           <article class="menu-card" id="card-champurrado" data-id="champurrado" data-name="Champurrado" data-price="20">
-            <div class="card-img"><img src="assets/champurrado-nuevo.jpg" alt="Champurrado artesanal caliente en taza" loading="lazy"></div>
+            <div class="card-img"><img class="img-champurrado" src="assets/champurrado-nuevo.jpg" alt="Champurrado en jarrito con rama de canela, virutas de chocolate y frasco de miel al fondo" loading="lazy"></div>
             <div class="card-body">
               <div class="card-top"><h3>Champurrado</h3><span class="price"><small>Desde</small>$20 MXN</span></div>
               <span class="tag">Especialidad del día</span>
